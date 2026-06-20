@@ -109,6 +109,19 @@ if [ ! -d libarchive ]; then
 	$WGET https://github.com/libarchive/libarchive/releases/download/v${v_libarchive}/libarchive-${v_libarchive}.tar.xz -O - | \
 		tar -xJ -C libarchive --strip-components=1
 fi
+# libdvdread
+if [ ! -d libdvdread ]; then
+	mkdir libdvdread
+	$WGET https://downloads.videolan.org/pub/videolan/libdvdread/${v_libdvdread}/libdvdread-${v_libdvdread}.tar.xz -O - | \
+		tar -xJ -C libdvdread --strip-components=1
+fi
+
+# libdvdnav
+if [ ! -d libdvdnav ]; then
+	mkdir libdvdnav
+	$WGET https://downloads.videolan.org/pub/videolan/libdvdnav/${v_libdvdnav}/libdvdnav-${v_libdvdnav}.tar.xz -O - | \
+		tar -xJ -C libdvdnav --strip-components=1
+fi
 # libass
 [ ! -d libass ] && git clone https://github.com/libass/libass
 

@@ -24,6 +24,8 @@ v_bzip2=1.0.8
 v_xz=5.8.1
 v_zstd=1.5.7
 v_libarchive=3.8.7
+v_libdvdread=7.0.1
+v_libdvdnav=7.0.0
 
 
 ## Dependency tree
@@ -48,7 +50,9 @@ dep_shaderc=()
 dep_libplacebo=(shaderc)
 dep_libbluray=()
 dep_libarchive=(libiconv bzip2 xz zstd)
-dep_mpv=(ffmpeg libass lua libplacebo libbluray libiconv uchardet libarchive)
+dep_libdvdread=()
+dep_libdvdnav=(libdvdread)
+dep_mpv=(ffmpeg libass lua libplacebo libbluray libiconv uchardet libarchive libdvdnav)
 dep_mpv_android=(mpv)
 
 
@@ -60,4 +64,4 @@ v_ci_ffmpeg=n8.1.1
 v_ci_prefix=3
 
 # filename used to uniquely identify a build prefix
-ci_tarball="prefix-ndk-${v_ndk}-vulkan-shaderc-lua-${v_lua}-unibreak-${v_unibreak}-harfbuzz-${v_harfbuzz}-fribidi-${v_fribidi}-freetype-${v_freetype}-libxml2-${v_libxml2}-fontconfig-${v_fontconfig}-mbedtls-${v_mbedtls}-libbluray-${v_libbluray}-libiconv-${v_libiconv}-uchardet-${v_uchardet}-bzip2-${v_bzip2}-xz-${v_xz}-zstd-${v_zstd}-libarchive-${v_libarchive}-ffmpeg-${v_ci_ffmpeg}-prefix-${v_ci_prefix}.tgz"
+ci_tarball="prefix-ndk-${v_ndk}-vulkan-shaderc-lua-${v_lua}-unibreak-${v_unibreak}-harfbuzz-${v_harfbuzz}-fribidi-${v_fribidi}-freetype-${v_freetype}-libxml2-${v_libxml2}-fontconfig-${v_fontconfig}-mbedtls-${v_mbedtls}-libbluray-${v_libbluray}-libiconv-${v_libiconv}-uchardet-${v_uchardet}-bzip2-${v_bzip2}-xz-${v_xz}-zstd-${v_zstd}-libarchive-${v_libarchive}-libdvdread-${v_libdvdread}-libdvdnav-${v_libdvdnav}-ffmpeg-${v_ci_ffmpeg}-prefix-${v_ci_prefix}.tgz"
