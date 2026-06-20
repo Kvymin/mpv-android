@@ -43,6 +43,7 @@ meson setup "$build" --cross-file "$prefix_dir"/crossfile.txt \
 	--default-library shared \
 	-Diconv=enabled -Duchardet=enabled \
 	-Dlibarchive=enabled -Ddvdnav=enabled \
+	-Dlibcurl=enabled \
 	-Dlua=enabled \
 	-Dlibmpv=true -Dcplayer=false \
 	-Dlibbluray=enabled \

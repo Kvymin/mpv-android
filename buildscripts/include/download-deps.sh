@@ -122,6 +122,12 @@ if [ ! -d libdvdnav ]; then
 	$WGET https://downloads.videolan.org/pub/videolan/libdvdnav/${v_libdvdnav}/libdvdnav-${v_libdvdnav}.tar.xz -O - | \
 		tar -xJ -C libdvdnav --strip-components=1
 fi
+# libcurl
+if [ ! -d libcurl ]; then
+	mkdir libcurl
+	$WGET https://curl.se/download/curl-${v_libcurl}.tar.xz -O - | \
+		tar -xJ -C libcurl --strip-components=1
+fi
 # libass
 [ ! -d libass ] && git clone https://github.com/libass/libass
 
